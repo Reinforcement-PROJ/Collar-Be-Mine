@@ -1,0 +1,13 @@
+# General
+.DS_Store
+.vscode/
+
+# Dependencies
+node_modules
+
+# package-lock
+package-lock.json
+
+#output
+dist/
+.env
