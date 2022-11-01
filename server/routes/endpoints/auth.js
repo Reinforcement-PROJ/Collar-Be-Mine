@@ -12,7 +12,7 @@ router
       `Received ${req.method} request at terminal '${req.baseUrl}${req.url}' endpoint`
     );
     log.info(res.locals.userInfo.user_id);
-    res.status(200).json({ user_id: res.locals.userInfo.user_id });
+    res.status(200).json([res.locals.userInfo, res.locals.newUser]);
     // query the database and either make new acct/ allow sign in
   });
 export default router;

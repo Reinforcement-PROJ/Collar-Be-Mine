@@ -13,10 +13,12 @@ export default async (req, res, next) => {
 
     const data = await result.json();
 
-    log.info(typeof data);
-    log.info(data);
-    // log.info(result.);
-    if (result) res.status(200).json(result);
+    res.locals.googleUser = {
+      display_name: data.name,
+      email: data.email,
+    };
+    log.info('Retrieved user profile from Google');
+    return next();
   } catch (err) {
     return next({
       log: 'Error in googleAuth middleware',
