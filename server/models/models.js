@@ -1,14 +1,21 @@
-const { Pool } = require('pg');
+import * as pg from 'pg';
+const { Pool } = pg.default;
+import dotenv from 'dotenv';
+import log from '../logger/index.js';
+dotenv.config();
 
-const PG_URI = 'postgres://zjdimqmg:CeUkx82CZqvf01A_IJsLow9uUH7w_Pan@peanut.db.elephantsql.com/zjdimqmg';
+const PG_URI = process.env.DATABASE_URL;
 
-const pool = new Pool({
-  connectionString: PG_URI
-});
+// const pool = new Pool({
+//   connectionString: PG_URI,
+// });
+const databaseConfig = { connectionString: PG_URI };
 
-module.exports = {
+const pool = new Pool(databaseConfig)
+
+export const db = {
   query: (text, params, callback) => {
-    console.log('executed query: ', text);
+    log.info(`Executed Query: ${text}`);
     return pool.query(text, params, callback);
-  }
+  },
 };
