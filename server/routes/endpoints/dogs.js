@@ -2,26 +2,24 @@ import express, { Router } from 'express';
 import log from '../../logger/index.js';
 import pg from 'pg';
 import { dogList, newDog } from '../../middleware/index.js';
-const router = express.Router(); // declare router
+const router = express.Router();
 
 router
   .route('/dogs')
-  // get list of all dogs with same location as user
-  .get(/*dogList,*/ async (req, res) => {
+  // get list of local dogs
+  .get(dogList, async (req, res) => {
     log.info(
       `Received ${req.method} request at terminal '${req.baseUrl}${req.url}' endpoint`
     );
-    log.info(res.locals.nearbyDogs);
-    res.status(200).json(res.locals.nearbyDogs);
+    log.info(res.locals.dogList);
+    res.status(200).json(res.locals.dogList);
   })
-
-  // create a new dog upon user creation & form submission
-  .post(/*newDog,*/ async (req, res) => {
+  // create new dog
+  .post(newDog, async (req, res) => {
     log.info(
       `Received ${req.method} request at terminal '${req.baseUrl}${req.url}' endpoint`
     );
-    log.info(res.locals.newDog);
-    res.status(200).json(res.locals.newDog);
+    res.status(200).send('successfully created new dog in db');
   });
 
 export default router;

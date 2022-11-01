@@ -1,8 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import Login from './Components/login/Login';
 
 const App = () => {
-  return <h1>HELLO DOGS!</h1>;
+  return (
+    <Routes>
+      <Route path="/" element={<Login />} />
+    </Routes>
+  );
 };
 
 export default App;
