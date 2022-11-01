@@ -25,7 +25,7 @@ export default async (req, res, next) => {
       log: 'Error in AuthUser middleware',
       status: 400,
       message: {
-        err: `Unable to fulfull request at '${req.baseUrl}${req.url}' endpoint: ${err}`,
+        err: `Unable to fulfill request at '${req.baseUrl}${req.url}' endpoint: ${err}`,
       },
     });
   }
