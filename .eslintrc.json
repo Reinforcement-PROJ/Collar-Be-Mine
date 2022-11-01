@@ -1,5 +1,9 @@
 {
-  "extends": ["airbnb", "plugin:prettier/recommended", "prettier/react"],
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended",
+    "prettier/react"
+  ],
   "env": {
     "browser": true,
     "commonjs": true,
@@ -8,7 +12,6 @@
     "node": true
   },
   "rules": {
-    "react/react-in-jsx-scope": "off",
     "jsx-a11y/href-no-hash": ["off"],
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "max-len": [
@@ -24,21 +27,6 @@
         "ignoreTemplateLiterals": true,
         "ignoreRegExpLiterals": true
       }
-    ],
-    "indent": ["warn", 2, { "SwitchCase": 1 }],
-    "no-unused-vars": ["off", { "vars": "local" }],
-    "prefer-const": "warn",
-    "quotes": ["warn", "single"],
-    "semi": ["warn", "always"],
-    "space-infix-ops": "warn",
-    "react/prefer-stateless-function": "off",
-    "react/prop-types": "off",
-    "react/jsx-key": "warn"
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    },
-    "import/resolver": "webpack"
+    ]
   }
 }
