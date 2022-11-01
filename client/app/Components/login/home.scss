@@ -1,13 +1,12 @@
-home-navbar {
+.home-navbar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
   border: solid;
   border-color: blue;
 }
 
-home-page {
-  display: flex;
-  flex-direction: row;
+.home-page {
   border: solid;
   border-color: black;
 }

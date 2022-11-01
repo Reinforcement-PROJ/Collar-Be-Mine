@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import './home.scss';
 
 // renders home page / dashbard and fetches dog list data
 // navbar that will link / redirect to conversations and user settings
@@ -10,15 +11,13 @@ const Home = () => {
   return (
     <div className='home-page'>
       <div className="home-navbar">
-      <h2>Collar Be Mine</h2>
-      <nav>
         <Link to="/conversations">Msgs</Link>
+        <h2>Collar Be Mine</h2>
         <Link to="/settings">Settings</Link>
-      </nav>
+      </div>
+      <div className='home-dog-list'>
+      </div>
     </div>
-    <div className='home-dog-list'>
-    </div>
-  </div>
   );
 };
 
