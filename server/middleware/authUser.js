@@ -3,7 +3,7 @@ import { db } from '../models/models.js';
 
 export default async (req, res, next) => {
   log.info(`Received ${req.method} request at 'authUser' middleware`);
-  const { email, display_name } = req.body;
+  const { email, display_name } = res.locals.googleUser;
   try {
     const query = `SELECT * FROM "users" WHERE email = '${email}';`;
     const result = await db.query(query);
@@ -14,9 +14,14 @@ export default async (req, res, next) => {
       const adding = `INSERT INTO "users" (email, display_name) VALUES ('${email}', '${display_name}');`;
       const entry = await db.query(adding);
       log.info('Account Created');
+      res.locals.newUser = true;
+      const findNew = `SELECT * FROM "users" WHERE email = '${email}';`;
+      const dataOfNew = await db.query(findNew);
+      res.locals.userInfo = dataOfNew.rows[0];
       return next();
     } else {
       res.locals.userInfo = result.rows[0];
+      res.locals.newUser = false;
       log.info('Got user info !');
       return next();
     }
