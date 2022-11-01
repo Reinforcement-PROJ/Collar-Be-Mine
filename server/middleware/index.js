@@ -1,4 +1,4 @@
 import authUser from './authUser.js';
 import jwtCreator from './jwtCreator.js';
-
-export { authUser, jwtCreator };
+import googleAuth from './googleAuth.js'
+export { authUser, jwtCreator, googleAuth };
