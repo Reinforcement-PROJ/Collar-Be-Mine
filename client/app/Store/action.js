@@ -28,5 +28,5 @@ export const SET_LOCATION = (location) => ({
 
 export const SET_SIZE = (size) => ({
   type: types.SET_SIZE,
-  payload: SET_SIZE
+  payload: size
 });

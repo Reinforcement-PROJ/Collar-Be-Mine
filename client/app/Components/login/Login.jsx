@@ -29,7 +29,7 @@ const Login = () => {
         dispatch(SET_USERID(userInfo.user_id));
         dispatch(SET_NEWUSER(newUser));
         
-        if (newUser) navigate('/createpet')
+        if (newUser) navigate('/petinfo')
         else navigate('/home');
       })
     }
