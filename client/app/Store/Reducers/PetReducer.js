@@ -1,8 +1,8 @@
 import * as types from '../actionTypes';
 
 const initialState = {
-  location: "", 
-  size: ""
+  location: "Chicago", 
+  size: "Large"
 };
 
 

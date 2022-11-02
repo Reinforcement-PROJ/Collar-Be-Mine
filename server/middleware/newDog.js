@@ -3,7 +3,19 @@ import { db } from '../models/models.js';
 
 export default async (req, res, next) => {
   log.info(`Received ${req.method} request at 'newDog' middleware`);
-  const { dog_id, user_id, owner_name, dog_name, dog_breed, dog_size, location, fav_activities, personal_bio, conversations_id, matches_id } = req.body;
+  const {
+    dog_id,
+    user_id,
+    owner_name,
+    dog_name,
+    dog_breed,
+    dog_size,
+    location,
+    fav_activities,
+    personal_bio,
+    conversations_id,
+    matches_id,
+  } = req.body;
   try {
     const addNewDog = `INSERT INTO "dogs" (user_id, owner_name, dog_name, dog_breed, dog_size, location, fav_activities, personal_bio, conversations_id, matches_id) VALUES ('${user_id}', '${owner_name}', '${dog_name}', '${dog_breed}', '${dog_size}', '${location}', '${fav_activities}', '${personal_bio}', '${conversations_id}', '${matches_id}');`;
     const entry = await db.query(addNewDog);
