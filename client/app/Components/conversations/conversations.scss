@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap');
+
+.conversationsWrapper {
+  // display: flex;
+  // flex-direction: column;
+  display: grid;
+  grid-template-rows: .1fr 1fr;
+  height: 80vh;
+  width: 45vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  border: solid;
+  border-color: black ;
+}
+
+.navbar {
+  // display: flex;
+  // flex-direction: column;
+  border: solid;
+  border-color: gray;
+  height: 10vh;
+  margin-bottom: 3vh;
+}
+
+.logo-img {
+  width: 30%;
+}
+
+.home-img {
+  width: 20px;
+}
+
+.settings-img {
+  // width: 50px;
+}
+
+.content {
+  display: flex;
+}
+
+.matches {
+  border: solid;
+  border-color: gray;
+  width: 50%;
+}
+
+.conversations {
+  border: solid;
+  border-color: gray;
+  width: 100%;
+}
