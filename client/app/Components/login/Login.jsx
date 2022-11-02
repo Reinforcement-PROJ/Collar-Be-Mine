@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useGoogleLogin } from '@react-oauth/google';
 import { useDispatch , useSelector} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import './login.scss'
+import logo from '../../assets/logo.png'
+import backgroundImg from '../../assets/okeykat-w6elADh_jww-unsplash.jpg'
 
 import { SET_NAME, SET_EMAIL, SET_NEWUSER, SET_USERID } from '../../Store/action.js';
 const Login = () => {
@@ -35,11 +38,17 @@ const Login = () => {
     }
   });
   return (
-    <div className='login'>
+    <div className='loginWrapper'>
+      <section className='loginContent'>
       <h1>PLEASE LOG IN: W GOOGLE FOO </h1>
-      <button type="button" onClick={() => handleLogin()}>
-        Sign in with Google 🚀{' '}
+      <img src={logo} alt="" />
+      <div>
+      <button type="button" onClick={() => handleLogin()} id='customBtn'>
       </button>
+      </div>
+      </section>
+      <div className='loginImage'>
+      </div>
     </div>
   );
 };
