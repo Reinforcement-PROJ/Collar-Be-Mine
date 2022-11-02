@@ -1,7 +1,17 @@
 .dog-card {
   display: flex;
-  border: solid;
-  border-color: gray;
-  height: 40px;
-  width: 40px;
+  flex-direction: row;
+  justify-content: center;
+  // border: solid;
+  // border-color: gray;
+  border-radius: 15px;
+  padding: 10px 10px;
+  margin-top: 10px;
+  height: 20vh;
+  width: 80%;
+  background-color: pink;
+}
+
+.dog-img {
+  width: 50%;
 }
