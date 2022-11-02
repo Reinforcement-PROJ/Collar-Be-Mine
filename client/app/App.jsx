@@ -9,7 +9,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/petinfo" element={<Petinfo />} />
-      <Route path="/home" element={<Home />} />
+      <Route path="/home" element={<Home />} /> {/* after successful login or new user form submission */}
     </Routes>
   );
 };
