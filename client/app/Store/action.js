@@ -30,3 +30,8 @@ export const SET_SIZE = (size) => ({
   type: types.SET_SIZE,
   payload: size
 });
+
+export const SET_OPTIONS = (size) => ({
+  type: types.SET_OPTIONS,
+  payload: options
+})

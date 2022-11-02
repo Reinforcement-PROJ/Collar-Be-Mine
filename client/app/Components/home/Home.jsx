@@ -32,11 +32,9 @@ const Home = () => {
   return (
     <div className='home-page'>
       <div className="home-navbar">
-        <Link to="/conversations"> <img className="msg-logo" src={msgLogo}></img> </Link>
-        <Link to="/settings"> <img className="settings-logo" src={settingsLogo}></img> </Link>
-      </div>
-      <div className="home-logo">
+        <Link to="/conversations" className="msg-logo"> <img src={msgLogo}></img> </Link>
         <img className="logo-img" alt="collar be mine logo" src={logo}></img>
+        <Link to="/settings" className="msg-logo"> <img  src={settingsLogo}></img> </Link>
       </div>
       <div className='home-dog-list'>
         {localDogs}

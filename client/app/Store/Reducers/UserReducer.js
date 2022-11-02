@@ -6,6 +6,7 @@ const initialState = {
   email: '',
   match: [],
   convo: [],
+  options: [],
   newUser: false,
 };
 
@@ -34,6 +35,12 @@ const userReducer = (state = initialState, action) => {
         ...state,
         newUser: action.payload,
       };
+    }
+    case types.SET_OPTIONS: {
+      return {
+        ...state,
+        options: action.payload
+      }
     }
     default: {
       return state;

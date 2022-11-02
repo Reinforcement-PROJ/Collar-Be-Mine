@@ -8,7 +8,7 @@ import backgroundImg from '../../assets/okeykat-w6elADh_jww-unsplash.jpg'
 
 import { SET_NAME, SET_EMAIL, SET_NEWUSER, SET_USERID } from '../../Store/action.js';
 const Login = () => {
-  
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -25,13 +25,13 @@ const Login = () => {
         body: JSON.stringify({ accessToken: tokenResponse.access_token }),
       }).then((response) => response.json())
       .then((data) => {
-        console.log(data); 
+        console.log(data);
         const [userInfo, newUser] = data;
-        dispatch(SET_NAME(userInfo.display_name)); 
+        dispatch(SET_NAME(userInfo.display_name));
         dispatch(SET_EMAIL(userInfo.email));
         dispatch(SET_USERID(userInfo.user_id));
         dispatch(SET_NEWUSER(newUser));
-        
+
         if (newUser) navigate('/petinfo')
         else navigate('/home');
       })
