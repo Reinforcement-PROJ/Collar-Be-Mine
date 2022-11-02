@@ -19,3 +19,14 @@ export const SET_NEWUSER = (newUser) => ({
   type: types.SET_NEWUSER,
   payload: newUser
 });
+
+
+export const SET_LOCATION = (location) => ({
+  type: types.SET_LOCATION,
+  payload: location
+});
+
+export const SET_SIZE = (size) => ({
+  type: types.SET_SIZE,
+  payload: SET_SIZE
+});
