@@ -1,7 +1,7 @@
 .home-navbar {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   border: solid;
   border-color: blue;
 }
@@ -9,4 +9,18 @@
 .home-page {
   border: solid;
   border-color: black;
+  height: 100vh;
+}
+
+.home-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.home-dog-list {
+  display: flex;
+  justify-content: center;
+  border: solid;
+  border-color: pink;
+  height: 75vh;
 }
