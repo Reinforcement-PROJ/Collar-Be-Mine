@@ -5,11 +5,12 @@ import msgLogo from '../../assets/msg-logo.png';
 import settingsLogo from '../../assets/settings-gear.png';
 import './home.scss';
 import DogCard from './DogCard.jsx';
-
+import Confetti from 'react-confetti'
+// import useWindowSize from 'react-use/lib/useWindowSize'
 // renders home page / dashbard and fetches dog list data
 // navbar that will link / redirect to conversations and user settings
 const Home = () => {
-
+  // const { width, height } = useWindowSize()
   // how to render dog list? handle func or for loop to array?
   let dogs;
   const [localDogs, setLocalDogs] = useState([]);
@@ -39,6 +40,10 @@ const Home = () => {
       <div className='home-dog-list'>
         {localDogs}
       </div>
+      {/* <Confetti
+      width={width}
+      height={height}
+    /> */}
     </div>
   );
 };

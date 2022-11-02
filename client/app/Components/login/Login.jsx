@@ -40,7 +40,6 @@ const Login = () => {
   return (
     <div className='loginWrapper'>
       <section className='loginContent'>
-      <h1>PLEASE LOG IN: W GOOGLE FOO </h1>
       <img src={logo} alt="" />
       <div>
       <button type="button" onClick={() => handleLogin()} id='customBtn'>
