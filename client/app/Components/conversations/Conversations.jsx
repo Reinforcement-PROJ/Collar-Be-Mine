@@ -9,10 +9,10 @@ const Conversations = () => {
   return (
     <div className="conversationsWrapper">
       <div className="navbar">
-        {/* <h4>nav bar here</h4> */}
+        <h4>nav bar here</h4>
         {/* <Link to="/home" className="home-img"> <img src={msgLogo}></img> </Link> */}
         {/* <img className="logo-img" alt="collar be mine logo" src={logo}></img> */}
-        <Link to="/settings" className="settings-img"> <img  src={settingsLogo}></img> </Link>
+        {/* <Link to="/settings" className="settings-img"> <img  src={settingsLogo}></img> </Link> */}
       </div>
       <div className="content">
         <div className="matches">
