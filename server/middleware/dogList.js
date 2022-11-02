@@ -3,9 +3,8 @@ import { db } from '../models/models.js';
 
 export default async (req, res, next) => {
   log.info(`Received ${req.method} request at 'dogList' middleware`);
-  const { location } = req.body;
   try {
-    const query = `SELECT * FROM "dogs" WHERE location = '${location}';`;
+    const query = `SELECT * FROM "dogs";`;
     const result = await db.query(query);
     res.locals.dogList = result.rows; // [0]?
     log.info('Got dogList info!');
